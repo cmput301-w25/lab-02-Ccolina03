@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 // Remove the clicked item from the dataList
                 dataList.remove(position);
-                // Notify the adapter of the change
+                // Notify the adapter of the change (like hey dataLIst changed so refresh)
                 cityAdapter.notifyDataSetChanged();
             }
         });
