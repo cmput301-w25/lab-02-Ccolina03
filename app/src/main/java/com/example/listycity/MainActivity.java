@@ -25,24 +25,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // EdgeToEdge.enable(this);
-
         //Accessing activity_main file
         setContentView(R.layout.activity_main);
-//        //Handle top of screen make it different(optional)
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
 
         editText = (EditText) findViewById(R.id.editText1);
         btn = (Button) findViewById(R.id.button1);
         //Get id of component of list
         cityList = findViewById(R.id.city_list);
-        //String[] cities = {"Edmonton", "Vancouver", "Calgary"};
         dataList = new ArrayList<>();
-        //dataList.addAll(Arrays.asList(cities));
         cityAdapter = new ArrayAdapter<>(this, R.layout.content, dataList);
         cityList.setAdapter(cityAdapter);
         btn.setOnClickListener(new View.OnClickListener() {
